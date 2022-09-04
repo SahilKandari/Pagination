@@ -1,38 +1,64 @@
 .App {
   text-align: center;
+  background-color: rgb(238, 238, 238);
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App table {
+  width: 100vw;
+  height: 90vh;
+  padding: 20px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pagination_button {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
+  padding: 0 50px;
+}
+.App tr:hover {
+  background-color: rgb(153, 152, 152);
 }
 
-.App-link {
-  color: #61dafb;
+.App td:hover {
+  background-color: rgb(209, 209, 209);
 }
+.App > h3 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+.pagination {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+}
+.pagination > button {
+  width: 40px;
+  border: 1px solid grey;
+  border-radius: 20px;
+}
+.pagination > button:hover {
+  background-color: rgb(209, 209, 209);
+  width: 60px;
+  border: 2px solid rgb(136, 128, 128);
+}
+.firstPage {
+  background-color: rgb(207, 253, 138);
+  margin-right: 50px;
+}
+.activePage {
+  background-color: rgba(144, 204, 253, 0.658);
+  margin: 0 30px;
+}
+.pagination_button > button {
+  border: 1px solid rgb(136, 128, 128);
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border-radius: 30px;
+  font-size: 16px;
+  padding: 10px;
+  width: 120px;
+}
+.pagination_button > button:hover {
+  background-color: rgb(209, 209, 209);
+  width: 130px;
+  border: 2px solid rgb(136, 128, 128);
 }
