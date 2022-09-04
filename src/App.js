@@ -30,10 +30,33 @@ function App() {
     if (pagination > 10) {
       setPagination(pagination - 10);
       setPage(page - 1);
-    } else {
+    }
+
+    if (pagination <= 10) {
       setPagination(0);
       setPage(1);
     }
+  };
+
+  const leastPage = () => {
+    setPagination(0);
+    setPage(1);
+  };
+  const setLessPage = (page) => {
+    setPagination(page * 10);
+    setPage(page);
+  };
+  const setLesserPage = (page) => {
+    setPagination(page * 10);
+    setPage(page);
+  };
+  const setMorePage = (page) => {
+    setPagination(page * 10);
+    setPage(page);
+  };
+  const setMostPage = (page) => {
+    setPagination(page * 10);
+    setPage(page);
   };
   let less;
   let more;
@@ -45,26 +68,6 @@ function App() {
     most = page + 2;
     lesser = page - 2;
   }
-  const leastPage = () => {
-    setPagination(0);
-    setPage(1);
-  };
-  const setLessPage = (page) => {
-    setPagination(page * 10);
-    setPage(page);
-  };
-  const setLesserPage = (page) => {
-    setPagination(page * 20);
-    setPage(page);
-  };
-  const setMorePage = (page) => {
-    setPagination(page * 10);
-    setPage(page);
-  };
-  const setMostPage = (page) => {
-    setPagination(page * 20);
-    setPage(page);
-  };
 
   return (
     <div className="App">
@@ -98,7 +101,7 @@ function App() {
             </tbody>
           </table>
           <div className="pagination_button">
-            {page !== 1 && (
+            {pagination >= 10 && (
               <button type="button" onClick={onPrevioustHandler}>
                 &laquo; Previous
               </button>
